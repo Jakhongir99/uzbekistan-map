@@ -1,6 +1,3 @@
-// Prepare demo data
-// Data is joined to map using value of 'hc-key' property by default.
-// See API docs for 'joinBy' for more info on linking data and map.
 var data = [
     ['uz-fa', 0],
     ['uz-tk', 1],
@@ -31,7 +28,7 @@ Highcharts.mapChart('container', {
     subtitle: {
         text: ''
     },
-
+    width:"1200px",
     mapNavigation: {
         enabled: false,
         buttonOptions: {
@@ -39,21 +36,18 @@ Highcharts.mapChart('container', {
         }
     },
 
-    // colorAxis: {
-    //     min: 0
-    // },
-
     series: [{
         data: data,
         name: 'Random data',
+        color:"#199174",
         states: {
             hover: {
-                color: '#BADA55'
+                color: '#F5CD7A'
             }
         },
         dataLabels: {
             enabled: true,
-            format: '{point.name}'
+            format: '{point.name}',
         }
     }]
 });
